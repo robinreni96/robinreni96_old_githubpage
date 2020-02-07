@@ -2,7 +2,7 @@
 
 Tensorflow is one of the major framework for AI.
 
-```yaml
+```python
 import tensorflow
 import numpy as np
 import pandas as pd
