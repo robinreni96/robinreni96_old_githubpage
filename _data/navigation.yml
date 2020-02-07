@@ -3,6 +3,6 @@
     url: /posts/
   - title: "Categories"
     url: "/categories"
-  - title: "About"
-    url: "/about"
+  - title: "Tags"
+    url: "/tags"
   
