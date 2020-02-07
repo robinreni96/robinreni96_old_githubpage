@@ -26,7 +26,7 @@ baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/teaser_main.png"
 logo                     : "/assets/images/icon_profile.png" 
-masthead_title           : " "
+masthead_title           : "End to End AI"
 breadcrumbs            : true # true, false (default)
 words_per_minute         : 200
 comments:
@@ -108,7 +108,7 @@ analytics:
 # Site Author
 author:
   name             : "Robin Reni"
-  avatar           : "/assets/images/icon_profile.png"
+  avatar           : "/assets/images/profile.png"
   bio              : "Data Scientist"
   location         : "India"
   email            : "robinreni96@gmail.com"
