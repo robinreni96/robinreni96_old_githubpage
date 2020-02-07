@@ -24,7 +24,7 @@ description              : "Data Scientist"
 url                      : # the base hostname & protocol for your site e.g. 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/teaser.jpg"
+teaser                   : "/assets/images/teaser_main.png"
 logo                     : "/assets/images/icon_profile.png" 
 masthead_title           : " "
 breadcrumbs            : true # true, false (default)
