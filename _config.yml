@@ -20,7 +20,7 @@ title                    : "Robin Reni Blog"
 title_separator          : "|"
 subtitle                 : # site tagline th  at appears below site title in masthead
 name                     : "Robin Reni"
-description              : "Data Scientist"
+description              : "Data Scientist at IQVIA & Former AI Engineer at Innovation Incubator"
 url                      : # the base hostname & protocol for your site e.g. 
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -99,10 +99,10 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : UA-158399666-1
+    anonymize_ip         : "false" # true, false (default)
 
 
 # Site Author
