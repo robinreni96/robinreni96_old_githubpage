@@ -3,8 +3,8 @@ layout: single
 header:
   teaser: /assets/images/signature.png
 title: "Signature Classification using Siamese Neural Network (Pytorch Code Example)"
-date: 2020-06-14 20:00:00 -0800
-categories: Neural Network
+date: 2020-02-14 20:00:00 -0800
+categories: NeuralNetwork
 tags:
   - Neural Network
   - Computer Vision
@@ -15,15 +15,15 @@ Classification of items based on their similarity is one of the major challenge 
 But Why Siamese Neural Networks ? and What are Siamese Neural Networks ? . For many of them its a  new word. Don’t worry! I will make it clear and easy for you. I will also explain the same with a small mini project.  But before that, you should understand some terminologies and topics behind it. Lets dive in!
 
 
-####  Siamese Neural Network Definition :
+### Siamese Neural Network:
 
 A Siamese Neural Network is a class of neural network architectures that **contain two or more** **_identical_** **sub networks**.  ‘_identical__’_ here means, they have the same configuration with the same parameters and weights. Parameter updating is mirrored across both sub networks.  It is used to find the similarity of the inputs by comparing its feature vectors.
 
-#### One-shot Learning :
+### One-shot Learning :
 
 It is an object categorization problem, found mostly in Computer Vision. Where, most Deep Learning based object categorization algorithms require training on hundreds or thousands of samples/images and very large datasets, one-shot learning **aims to learn information about object categories from one, or only a few, training samples/images**.
 
-#### Contrastive Loss or Lossless Triplet Loss:
+### Contrastive Loss or Lossless Triplet Loss:
 
 Like any distance-based loss, it tries to ensure that semantically similar examples are embedded close together. It is calculated on **Pairs**  (other popular distance-based Loss functions are Triplet & Center Loss, calculated on _Triplets_ and _Point wise_ respectively)
 
@@ -50,7 +50,7 @@ Don’t get panic by seeing its architecture. It’s an elaborated structure of 
 ### Working with Siamese Neural Network :
 In general, we learn image representations via a supervised metric-based approach with siamese neural networks, then reuse that network’s features for one-shot learning without any retraining.  Also we use **large Siamese Convolutional Neural Networks** because learning generic image features, easily trained and can be used irrespective of the domain.
 
--   **Preprocessing :** First step, collect and preprocess your data .
+-   **Preprocessing :** First step, collect and preprocess your data.
 
 -   **Modelling :** Then design your CNN architecture mostly large according to your domain its better to use standardized CNN for siamese which you can find in many research papers
 ![model](https://cdn-images-1.medium.com/max/1600/1*IhjVjQwQuCdsZk3Qcavt-w.png)
@@ -74,7 +74,7 @@ We know that Siamese is basically for **classification using similarity score.**
 
 In this blog we just represent the main part of Siamese Network. We considered **Offline Signature Classification** based upon Similarity Score as proof of concept. The Siamese architecture is inspired by [Signet Paper](https://arxiv.org/pdf/1707.02131.pdf). The dataset we used is [ICDAR 2011 Dataset](http://www.iapr-tc11.org/mediawiki/index.php/ICDAR_2011_Signature_Verification_Competition_(SigComp2011)) since its the classic and valid open source data.
 ### **Siamese Code Structure**
-
+```python
     class SiameseNetwork(nn.Module):
      def __init__(self):
           super(SiameseNetwork, self).__init__()
@@ -125,9 +125,10 @@ In this blog we just represent the main part of Siamese Network. We considered *
          output2 = self.forward_once(input2)
          # returning the feature vectors of two inputs
          return output1, output2
+```
 
 ### **Contrastive Loss Definition**
-
+```python
     class ContrastiveLoss(torch.nn.Module):
 
       def __init__(self, margin=2.0):
@@ -142,11 +143,12 @@ In this blog we just represent the main part of Siamese Network. We considered *
             (label) * torch.pow(torch.clamp(self.margin - euclidean_distance, min=0.0), 2))
 
             return loss_contrastive
+```
 
 ### **Oneshot Learning :**
 
 Oneshot learning is like extracting the feature vectors of the input images from the trained model to say **how much both of the images are dissimilar** without training the images of large datasets.
-
+```python
     def oneshot(model,img1,img2):
        # Gives you the feature vector of both inputs
        output1,output2 = model(img1.cuda(),img2.cuda())
@@ -157,7 +159,7 @@ Oneshot learning is like extracting the feature vectors of the input images from
                print("Orginal Signature")
        else:
                print("Forged Signature")
-
+```
 For making the model into production you can follow lot of articles and production documents.
 
 ### **Major Applications Siamese Neural Network :**
