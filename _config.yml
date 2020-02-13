@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dirt", "neon", "
 locale                   : "en-US"
 title                    : "Robin Reni Blog"
 title_separator          : "|"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : # site tagline th  at appears below site title in masthead
 name                     : "Robin Reni"
 description              : "Data Scientist"
 url                      : # the base hostname & protocol for your site e.g. 
