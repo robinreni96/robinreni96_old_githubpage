@@ -1,7 +1,7 @@
 ---
 layout: single
 header:
-  teaser: /assets/images/signature.png
+  teaser: /assets/images/key_ml.png
 title: "Key points of building good ML Models"
 date: 2020-02-14 20:00:00 -0800
 categories: MachineLearning
