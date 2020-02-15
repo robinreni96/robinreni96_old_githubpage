@@ -29,9 +29,9 @@ Follow the instruction to install openpose python api for your python project :
 
 
 2)  Clone the source repo of Openpose from their github
-    ```
-    $ git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
-    ```
+```
+$ git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
+```
 
 3) For Openpose there are some dependencies to be installed like  **CMake GUI , Nvidia Drivers , Caffe , Opencv** .
 
