@@ -35,30 +35,30 @@ $ git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
 
 3) For Openpose there are some dependencies to be installed like  **CMake GUI , Nvidia Drivers , Caffe , Opencv** .
 
-    **Warning :**  Anaconda should not be installed on your system. Anaconda includes a Protobuf version that is incompatible with Caffe. Either you uninstall anaconda and install protobuf via apt-get, or you compile your own Caffe and link it to OpenPose.
+**Warning :**  Anaconda should not be installed on your system. Anaconda includes a Protobuf version that is incompatible with Caffe. Either you uninstall anaconda and install protobuf via apt-get, or you compile your own Caffe and link it to OpenPose.
  
 4) **CMake GUI Installation :**
 Uninstall your current Cmake-gui version by running
-    ```shell
+    ```
     $ sudo apt purge cmake-qt-gui
     ```
     Run
-    ```shell
+    ```
     $ sudo apt-get install qtbase5-dev
     ```
     Download the Latest Release of CMake Unix/Linux Source from the_ [_CMake download website_](https://cmake.org/download/)_, called cmake-X.X.X.tar.gz_
     Unzip it and go inside that folder from the terminal.
     Run
-    ```shell
+    ```
     $ ./configure — qt-gui
     $ ./bootstrap && sudo make -j8 && sudo make install -j8
     ```
     After this step , CMake application will be available in the ubuntu menu bar like this :
     ![](https://miro.medium.com/max/1617/0*TL8F7AbmCKMVgosd.png)
 
-5) **Nvidia-Drivers: OpenPose has been tested extensively with CUDA 8.0 (cuDNN 5.1) and CUDA 10.0 (cuDNN 7.5) .** 
+5) **Nvidia-Drivers:** OpenPose has been tested extensively with CUDA 8.0 (cuDNN 5.1) and CUDA 10.0 (cuDNN 7.5) .
 
-    **_Note :_** _If you installed nvidia drivers beforehand or using CPU_ **skip this step** else follow the below instruction
+**Note :** If you installed nvidia drivers beforehand or using CPU_ **skip this step** else follow the below instruction
 
     **CUDA**:
     - Ubuntu 18 ([**CUDA 10**](https://developer.nvidia.com/cuda-downloads)): Download the latest Nvidia CUDA version from their  [official website](https://developer.nvidia.com/cuda-downloads).
@@ -71,19 +71,19 @@ Uninstall your current Cmake-gui version by running
     -   **Install Caffe, OpenCV, and Caffe prerequisites:**
 
     After successful installation of CUDA and cuDNN proceed with these commands
-    ```shell
+    ```
     $ cd openpose
     $ sudo bash ./scripts/ubuntu/install_deps.sh
     ```
 
 6) Since you made a fresh install of caffe you have to build it from source for Openpose
-    ```shell
+    ```
     $ cd openpose/3rdparty
     $ git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git
     ```
 
 7) Now create an empty subcategory “**build**” folder inside Openpose folder :
-    ```shell
+    ```
     $ cd openpose
     $ mkdir build
     ```
@@ -102,31 +102,31 @@ Uninstall your current Cmake-gui version by running
 ![](https://miro.medium.com/max/882/0*B3kw3dI46WTSGSLh.png)
 
 12) Close the CMake and proceed with commands in your virtual env enabled terminal. To build the openpose
-    ```shell
+    ```
     $ cd openpose/build/
     $ make -j`nproc`
     ```
 
 13) Compile the Openpose source
-    ```shell
+    ```
     $ cd openpose/build/
     $ sudo make install
     ```
 
 14) Compile and build the python Openpose :
-    ```shell
+    ```
     $ cd openpose/build/python/openpose
     $ sudo make install
     ```
 
 Thats it . To check the build successful completed and its usable follow the below command
 
-```shell
+```
 $ cd openpose/build/examples/tutorial_api_python
 ```
 
 if you used python3+ for your virtual env ,
-```shell
+```
 $ python 01_body_from_image.py
 ```
 
