@@ -9,6 +9,7 @@ tags:
   - Neural Network
   - Computer Vision
   - Pytorch
+  - Python
 ---
 Classification of items based on their similarity is one of the major challenge of Machine Learning and Deep Learning problems.But we have seen good results in Deep Learning comparing to ML thanks to Neural Networks , Large Amounts of Data and Computational Power. We have mostly seen that Neural Networks are used for Image Detection and Recognition etc . But I am not going to explain how we execute it. But in brief, we can say that **“Neural Networks are extracting features by finding the patterns in large set of images using mathematical computation for detecting and recognizing“**.
 
