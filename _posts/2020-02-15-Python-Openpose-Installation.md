@@ -29,7 +29,7 @@ Follow the instruction to install openpose python api for your python project :
 
 
 2)  Clone the source repo of Openpose from their github
-    ```console
+    ```
     $ git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
     ```
 
