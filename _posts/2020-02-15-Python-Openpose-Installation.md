@@ -39,85 +39,85 @@ $ git clone https://github.com/CMU-Perceptual-Computing-Lab/openpose
  
 4) **CMake GUI Installation :**
 Uninstall your current Cmake-gui version by running
-    ```
-    $ sudo apt purge cmake-qt-gui
-    ```
-    Run
-    ```
-    $ sudo apt-get install qtbase5-dev
-    ```
-    Download the Latest Release of CMake Unix/Linux Source from the_ [_CMake download website_](https://cmake.org/download/)_, called cmake-X.X.X.tar.gz_
-    Unzip it and go inside that folder from the terminal.
-    Run
-    ```
-    $ ./configure — qt-gui
-    $ ./bootstrap && sudo make -j8 && sudo make install -j8
-    ```
-    After this step , CMake application will be available in the ubuntu menu bar like this :
-    ![](https://miro.medium.com/max/1617/0*TL8F7AbmCKMVgosd.png)
+```
+$ sudo apt purge cmake-qt-gui
+```
+Run
+```
+$ sudo apt-get install qtbase5-dev
+```
+Download the Latest Release of CMake Unix/Linux Source from the_ [_CMake download website_](https://cmake.org/download/)_, called cmake-X.X.X.tar.gz_
+Unzip it and go inside that folder from the terminal.
+Run
+```
+$ ./configure — qt-gui
+$ ./bootstrap && sudo make -j8 && sudo make install -j8
+```
+After this step , CMake application will be available in the ubuntu menu bar like this :
+![](https://miro.medium.com/max/1617/0*TL8F7AbmCKMVgosd.png)
 
 5) **Nvidia-Drivers:** OpenPose has been tested extensively with CUDA 8.0 (cuDNN 5.1) and CUDA 10.0 (cuDNN 7.5) .
 
 **Note :** If you installed nvidia drivers beforehand or using CPU_ **skip this step** else follow the below instruction
 
-    **CUDA**:
-    - Ubuntu 18 ([**CUDA 10**](https://developer.nvidia.com/cuda-downloads)): Download the latest Nvidia CUDA version from their  [official website](https://developer.nvidia.com/cuda-downloads).
-    -   Select “Linux” -> “x86_64” -> “Ubuntu” -> “18.04” -> “runfile (local)”, and download it.
-    -   Follow the Nvidia website installation instructions. Make sure to enable the symbolic link in usr/local/cuda to minimize potential future errors.
+**CUDA**:
+- Ubuntu 18 ([**CUDA 10**](https://developer.nvidia.com/cuda-downloads)): Download the latest Nvidia CUDA version from their  [official website](https://developer.nvidia.com/cuda-downloads).
+-   Select “Linux” -> “x86_64” -> “Ubuntu” -> “18.04” -> “runfile (local)”, and download it.
+-   Follow the Nvidia website installation instructions. Make sure to enable the symbolic link in usr/local/cuda to minimize potential future errors.
 
-    **cuDNN:**
+**cuDNN:**
 
-    -   Ubuntu 18 ([**cuDNN 7.2**](https://developer.nvidia.com/cudnn)): Download and install it from the  [Nvidia website](https://developer.nvidia.com/cudnn).
-    -   **Install Caffe, OpenCV, and Caffe prerequisites:**
+-   Ubuntu 18 ([**cuDNN 7.2**](https://developer.nvidia.com/cudnn)): Download and install it from the  [Nvidia website](https://developer.nvidia.com/cudnn).
+-   **Install Caffe, OpenCV, and Caffe prerequisites:**
 
-    After successful installation of CUDA and cuDNN proceed with these commands
-    ```
-    $ cd openpose
-    $ sudo bash ./scripts/ubuntu/install_deps.sh
-    ```
+After successful installation of CUDA and cuDNN proceed with these commands
+```
+$ cd openpose
+$ sudo bash ./scripts/ubuntu/install_deps.sh
+```
 
 6) Since you made a fresh install of caffe you have to build it from source for Openpose
-    ```
-    $ cd openpose/3rdparty
-    $ git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git
-    ```
+```
+$ cd openpose/3rdparty
+$ git clone https://github.com/CMU-Perceptual-Computing-Lab/caffe.git
+```
 
 7) Now create an empty subcategory “**build**” folder inside Openpose folder :
-    ```
-    $ cd openpose
-    $ mkdir build
-    ```
-    ![](https://miro.medium.com/max/878/0*SLb2fQ5Ftt7O7jRc.png)
+```
+$ cd openpose
+$ mkdir build
+```
+![](https://miro.medium.com/max/878/0*SLb2fQ5Ftt7O7jRc.png)
 
 8) Open CMake GUI , select Openpose source code directory path and build directory path
-    ![](https://miro.medium.com/max/881/0*N28xA-o5b3NtSmve.png)
+![](https://miro.medium.com/max/881/0*N28xA-o5b3NtSmve.png)
 
 9) Select **Configure**  to compile the files. A dialog box appears  **CMakeSetup**  . Select the following and click finish.
-    ![](https://miro.medium.com/max/740/0*MZ8pmLFPu16gfXB0.png)
+![](https://miro.medium.com/max/740/0*MZ8pmLFPu16gfXB0.png)
 
 10) It takes some time to download models and compiling it. If any error happens it may be of CUDA or cuDNN installation. After successful configuration, it looks like this also check the “**BUILD_PYTHON**” inside the red box
-    ![](https://miro.medium.com/max/878/0*zMyfPTYozlxAS1Qf.png)
+![](https://miro.medium.com/max/878/0*zMyfPTYozlxAS1Qf.png)
 
 11) Now click “**Generate**” . It will be like this after the successful generation
 ![](https://miro.medium.com/max/882/0*B3kw3dI46WTSGSLh.png)
 
 12) Close the CMake and proceed with commands in your virtual env enabled terminal. To build the openpose
-    ```
-    $ cd openpose/build/
-    $ make -j`nproc`
-    ```
+```
+$ cd openpose/build/
+$ make -j`nproc`
+```
 
 13) Compile the Openpose source
-    ```
-    $ cd openpose/build/
-    $ sudo make install
-    ```
+```
+$ cd openpose/build/
+$ sudo make install
+```
 
 14) Compile and build the python Openpose :
-    ```
-    $ cd openpose/build/python/openpose
-    $ sudo make install
-    ```
+```
+$ cd openpose/build/python/openpose
+$ sudo make install
+```
 
 Thats it . To check the build successful completed and its usable follow the below command
 
