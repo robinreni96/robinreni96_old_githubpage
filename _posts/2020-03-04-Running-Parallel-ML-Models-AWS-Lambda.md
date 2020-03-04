@@ -4,10 +4,11 @@ header:
   teaser: /assets/images/lambda.png
 title: "Parallel ML Training & Prediction models using AWS Lambda service"
 date: 2020-03-04 20:00:00 -0800
-categories: MachineLearning, Beginner
+categories: MachineLearning
 tags:
   - Machine Learning
   - AWS
+  - Beginner
 ---
 
 If you are working as a **Data Scientist** or an **AI/ML engineer** your one of the major challenge is running **parallel ML models** for training or for prediction . People say we can make use of Distributed systems like big data systems spark , hadoop for parallel processing . But to understand the use case , our problem is not with data processing with big data its with parallel modelling . Also many suggestions are there by using multithreading or async calls to handle the parallel load , but by the end you are utilizing your personal system resources . Is there any way around to make things fast and cheap ?
