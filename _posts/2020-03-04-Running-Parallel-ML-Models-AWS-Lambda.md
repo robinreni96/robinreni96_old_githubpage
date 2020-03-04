@@ -162,10 +162,10 @@ $ zip -g function.zip lambda_handler.py
 
 ### Step 4: Exporting Deployment Package & Lambda Invocation : 
 Now you have your **lambda function in aws configured** and the **function.zip** depolyment package in your local system is ready .There are three ways of implementing functions in lambda:
-![enter image description here](https://lh3.googleusercontent.com/1kNPsSIwXd8YrtG2IAn2TtrYsP9tgpjdFEsLSVf-YF4vU7HQIsezasDTF9n2vbBTd33FQJODjOeO "lambda_func")
 * **Inline :** If its a simple function which does not need any additional libraries and overheads you can use this 
 * **Upload zip file:** If your deployment package ( **function.zip** ) is **not more than 10MB** you can directly import your function.zip and run it.
 * **Upload a file from Amazon S3**: For **function.zip** file which is **more than 10MB** , you can upload it in AWS S3 bucket and give the S3 file URL in the field value . 
+![enter image description here](https://lh3.googleusercontent.com/1kNPsSIwXd8YrtG2IAn2TtrYsP9tgpjdFEsLSVf-YF4vU7HQIsezasDTF9n2vbBTd33FQJODjOeO "lambda_func")
 
 In our case we are using Scikit and Pandas package in our function.zip  it exceeds 10Mb , so we are following S3 approach . I hope the remaining two are easy which you can try by yourself.
 
