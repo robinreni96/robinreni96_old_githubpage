@@ -4,7 +4,7 @@ header:
   teaser: /assets/images/pyspark.png
 title: "PySpark Intro & Installation - Ubuntu 18.04, Python 3.6"
 date: 2020-04-05 20:00:00 -0800
-categories: Data Mining
+categories: Data-Mining
 tags:
   - Distributed Data Processing
   - AI
