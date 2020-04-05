@@ -18,7 +18,7 @@ tags:
 In collaboration with Apache Spark , Python supports Spark API's to take advantage of distributed real time data processing. PySpark, helps you interface with Resilient Distributed Datasets  in Apache Spark and Python programming language. This has been achieved by taking advantage of the Py4j library. **Py4J** is a popular library which is integrated within PySpark and allows python to dynamically interface with JVM objects. Thats how Pyspark got JVM support for processing.
 
 ### Installation of PySpark :
-1) **Java 8 Installation :**
+1) ### Java 8 Installation:
 If you already have java 8 installed and default please skip this , otherwise
 ```
 $ sudo apt install openjdk-8-jdk
@@ -39,7 +39,7 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 ```
 Now you successfully installed Java 8 for Pyspark.
 
-2) **Python 3.6+ Installation:**
+2) ### Python 3.6+ Installation:
 If you already installed python 3.6+ please skip to next step , Otherwise:
 ```
 $ sudo apt install python3
@@ -55,9 +55,10 @@ Python 3.6.9 (default, Nov  7 2019, 10:44:02)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-3) **Download Spark File and Save it in $HOME:**
+3) ### Download Spark File and Save it in $HOME:
 **Download spark from** [**https://spark.apache.org/downloads.html**](https://spark.apache.org/downloads.html?)
 ![spark_download](https://lh3.googleusercontent.com/4Xnh_WLSIOdmOvC77fVq8z_KnxkrhEcPXkSpADNGx-4R8LLrE9M5iA-zw0q1IzBsMPxyH34ZCMb9 "spark")
+
 After downloaded, extract the file & move to home. Follow the command
 ```
 $ cd ~
@@ -70,7 +71,7 @@ $ sudo mv Downloads/spark-2.4.5-bin-hadoop2.7 .
 ```
 Now you successfully moved the source file of PySpark to home directory
 
-4) **Set the $JAVA_HOME environment variable:**
+4) ### Set the $JAVA_HOME environment variable:
 For this, run the following in the terminal:
 ```
 $ sudo vim /etc/environment
@@ -93,7 +94,7 @@ You can see the output:
 /usr/lib/jvm/java-8-openjdk-amd64
 ```
 
-5) **Configure environment variables for spark:**
+5) ### Configure environment variables for spark:
 Now we have to set the environment variables of PySpark to your linux system
 ```
 $ vim ~/.bashrc
@@ -113,7 +114,7 @@ $ source ~/.bashrc
 ```
 All setup done. Time to check  !
 
-6) **Run PySpark**
+6) ### Run PySpark
 Open a new terminal , Run
 ```
 $ pyspark
